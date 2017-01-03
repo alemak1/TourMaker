@@ -2,3 +2,8 @@
 The current skeleton file defines function that comprise the minimal functionality
 for the tour_maker class.  Existing functionality will be modified, and newer
 functionality added as the project progresses.
+
+(2) Overload the conversion operator for int so that a tour_object is convertible
+to an integer that represents its total distance.  This way, several  tour_objects can
+be converted to integers, sorted, and reconverted to the original tour objects.
+
