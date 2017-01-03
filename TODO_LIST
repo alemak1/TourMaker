@@ -9,3 +9,6 @@ be converted to integers, sorted, and reconverted to the original tour objects.
 
 (3) Overload the += operator so that a new tour stop can be added to the tour_object
 
+
+(4) Overload the equality(==) and inequality(!=) operators so that the tour_objects
+can be compared on the basis of their total distance
