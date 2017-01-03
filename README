@@ -1,0 +1,6 @@
+The tour_maker class is an API-client that allows users to connect to GoogleMaps
+API to calculate the total distance going from one stop to another on a tour whose
+stop-locations are passed as arguments to the API-client's initializer.  Users can
+query the API-client for statistics about their tours, such as the total distance
+going from one city to the next, in the order in which they were passed to the
+initializer, as well as the total time required for the tour.
