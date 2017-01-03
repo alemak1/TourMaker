@@ -7,3 +7,5 @@ functionality added as the project progresses.
 to an integer that represents its total distance.  This way, several  tour_objects can
 be converted to integers, sorted, and reconverted to the original tour objects.
 
+(3) Overload the += operator so that a new tour stop can be added to the tour_object
+
