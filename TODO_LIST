@@ -16,3 +16,11 @@ can be compared on the basis of their total distance
 (5) Overload the arithmetic addition operator so that two tour objects can be added together
 resulting in a tour objects whose tours stops combine the tour stops of the operands
 
+(6) Allow for user to specify additional criteria that can be added to the URL string
+and allow for more detailed information to be pulled from the Google API
+
+(7) Refactor data model logic so that additional information can be extracted from
+the parsed JSON data returned from the API
+
+(8) Place validators in their own class and objects of that class a stored property 
+of the tour object
