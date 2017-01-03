@@ -12,3 +12,7 @@ be converted to integers, sorted, and reconverted to the original tour objects.
 
 (4) Overload the equality(==) and inequality(!=) operators so that the tour_objects
 can be compared on the basis of their total distance
+
+(5) Overload the arithmetic addition operator so that two tour objects can be added together
+resulting in a tour objects whose tours stops combine the tour stops of the operands
+
