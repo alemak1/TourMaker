@@ -1,5 +1,6 @@
-from sets import Set, ImmutableSet
-import statistics
+import statistics,json
+from urllib.request import urlopen
+
 
 #TODO ITEMS:
 	#Define error classes and implement error handling and validation in code
@@ -22,7 +23,7 @@ class Tour:
 	base_url = "http://maps.googleapis.com/maps/api/distancematrix/json?"
 
 	#The set of all possible modes for traveling between cities is also consistent across different instances of tour
-	modes = ImmutableSet(['driving','bicycling','walking'])
+	modes = set(['driving','bicycling','walking'])
 
 
 	def __init__(self, *args):
@@ -286,12 +287,13 @@ class Tour:
 
 
 	def calculate_single_distance(self):
-		from urllib2 import urlopen
-		web_obj = urlopen(self.request_url)
-		json_string = str(web_obj.read())
-		web_obj.close()
+		response = urlopen(self.request_url)
+		json_string = ""
+		for line in response:
+			line = line.decode('utf-8')
+			json_string += line
+		print(json_string)
 
-		import json
 		json_data = json.loads(json_string)
 		returned_distance = json_data['rows'][0]['elements'][0]['distance']['value']
 		self.distances.append(returned_distance)
